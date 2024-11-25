@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maxon主页</title>
-    <link rel="stylesheet" href="public/css/style.css" />
-  </head>
-  <body>
-    <canvas id="bg"></canvas>
-    <main class="container">
-      <img
-        class="avatar"
-        src="https://www.helloimg.com/i/2024/11/25/67435299d0b32.jpeg"
-        alt="Avatar"
-      />
-      <h3 class="nickname">Maxon</h3>
-      <p class="introduce">Never bow your head easily.</p>
-      <nav>
-        <div class="item">
-          <a href="#">
-            <img src="public/svg/wechat.svg" />
-          </a>
-          <div class="tooltip"><img src="https://www.helloimg.com/i/2024/11/25/67434f9ec12ff.jpeg" /></div>
-      </nav>
-      <p class="quote">
-        允许一切发生并去接纳它体验它，
-        并从中学到一些东西为自己做铺垫——Maxon
-      </p>
-      <footer>
-        <a
-          target="_blank"
-          class="icp"
-          href="https://beian.miit.gov.cn/#/Integrated/index"
-          >粤ICP备2023000688号</a
-        >
-        <p>访客计数：<span id="visitorCount" style="font-size: smaller;">0</span></p>
-        <p class="copyright">
-        Copyright © 2024 Maxon All Rights Reserved
-        </p>
-      </footer>
-    </main>
-    <script>
-      // 获取访客计数元素
-      var visitorCountElement = document.getElementById("visitorCount");
-  
-     // 从localStorage获取访客计数，如果不存在则初始化为0
-      var visitorCount = parseInt(localStorage.getItem("visitorCount"), 10) || 0;
-  
-      // 每次页面加载时增加访客计数
-      visitorCount++;
-  
-      // 更新访客计数显示
-      visitorCountElement.innerHTML = visitorCount;
-    </script>
-    <script src="public/js/StarrySky.js"></script>
-    <script src="public/js/index.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Maxon主页</title>
+<link rel="stylesheet" href="public/css/style.css" />
+</head>
+<body>
+<canvas id="bg"></canvas>
+<main class="container">
+<img
+class="avatar"
+src="https://www.helloimg.com/i/2024/11/25/67435299d0b32.jpeg"
+alt="Avatar"
+/>
+<h3 class="nickname">Maxon</h3>
+<p class="introduce">Never bow your head easily.</p >
+<nav>
+<div class="item">
+<a href=" ">
+< img src="public/svg/wechat.svg" />
+</a >
+<div class="tooltip">< img src="https://www.helloimg.com/i/2024/11/25/67434f9ec12ff.jpeg" /></div>
+</div>
+</nav>
+<p class="quote">
+允许一切发生并去接纳它体验它，并从中学到一些东西为自己做铺垫——Maxon
+</p >
+<footer>
+<a
+target="_blank"
+class="icp"
+href="https://beian.miit.gov.cn/#/Integrated/index"
+>粤ICP备2023000688号</a >
+<p>访客计数：<span id="visitorCount" style="font-size: smaller;">0</span></p >
+<p class="copyright">
+Copyright  2024 Maxon All Rights Reserved
+</p >
+</footer>
+</main>
+<script>
+// 获取访客计数元素
+var visitorCountElement = document.getElementById("visitorCount");
+
+// 从localStorage获取访客计数，如果不存在则初始化为0
+var visitorCount = parseInt(localStorage.getItem("visitorCount"), 10) || 0;
+
+// 每次页面加载时增加访客计数
+visitorCount++;
+
+// 更新localStorage中的访客计数
+localStorage.setItem("visitorCount", visitorCount);
+
+// 更新访客计数显示
+visitorCountElement.innerHTML = visitorCount;
+</script>
+<script src="public/js/StarrySky.js"></script>
+<script src="public/js/index.js"></script>
+</body>
 </html>
