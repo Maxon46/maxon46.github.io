@@ -45,8 +45,8 @@
       // 获取访客计数元素
       var visitorCountElement = document.getElementById("visitorCount");
   
-      // 初始化访客计数为 0
-      var visitorCount = 0;
+     // 从localStorage获取访客计数，如果不存在则初始化为0
+      var visitorCount = parseInt(localStorage.getItem("visitorCount"), 10) || 0;
   
       // 每次页面加载时增加访客计数
       visitorCount++;
